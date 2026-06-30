@@ -3,38 +3,64 @@ date_default_timezone_set('Asia/Kolkata');
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Application Health Check</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudNova Solutions - Health Check</title>
+
     <style>
-        body{
-            font-family:Arial,sans-serif;
-            background:#f4f4f4;
-            text-align:center;
-            margin-top:80px;
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 0;
         }
 
-        .container{
-            width:500px;
-            margin:auto;
-            background:white;
-            padding:30px;
-            border-radius:10px;
-            box-shadow:0 0 10px rgba(0,0,0,.2);
+        .container {
+            width: 550px;
+            margin: 60px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.15);
+            text-align: center;
         }
 
-        h1{
-            color:#28a745;
+        h1 {
+            color: #0077cc;
+            margin-bottom: 10px;
         }
 
-        p{
-            font-size:18px;
+        h2 {
+            color: #444;
+            margin-bottom: 30px;
         }
 
-        .status{
-            color:green;
-            font-weight:bold;
-            font-size:22px;
+        .status {
+            font-size: 24px;
+            font-weight: bold;
+            color: #28a745;
+            margin: 20px 0;
+        }
+
+        .info {
+            text-align: left;
+            margin-top: 30px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .info strong {
+            display: inline-block;
+            width: 160px;
+        }
+
+        footer {
+            margin-top: 30px;
+            color: #777;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -43,19 +69,34 @@ date_default_timezone_set('Asia/Kolkata');
 
 <div class="container">
 
-<h1>CloudNova Solutions</h1>
+    <h1>☁️ CloudNova Solutions</h1>
 
-<h2>Application Health Check</h2>
+    <h2>Application Health Check</h2>
 
-<p>Status:</p>
+    <div class="status">
+        ✅ Application Healthy
+    </div>
 
-<p class="status">✅ Healthy</p>
+    <div class="info">
 
-<p><strong>Version:</strong> 1.0</p>
+        <p><strong>Application:</strong> CloudNova Solutions</p>
 
-<p><strong>Server Time:</strong> <?php echo date("d-m-Y H:i:s"); ?></p>
+        <p><strong>Status:</strong> Healthy</p>
+
+        <p><strong>Version:</strong> 1.0.0</p>
+
+        <p><strong>Environment:</strong> Production</p>
+
+        <p><strong>Server Time:</strong> <?php echo date("d-m-Y H:i:s"); ?></p>
+
+    </div>
+
+    <footer>
+        Powered by PHP, Docker, Jenkins & AWS EC2
+    </footer>
 
 </div>
 
 </body>
+
 </html>
