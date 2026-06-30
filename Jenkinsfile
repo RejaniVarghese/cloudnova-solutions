@@ -12,9 +12,18 @@ pipeline {
 
     stages {
 
+        stage('Cleanup Old Image') {
+            steps {
+                echo "Removing previous Docker image (if it exists)..."
+                sh '''
+                    docker rmi ${IMAGE_NAME}:${IMAGE_TAG} || true
+                '''
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
-                echo "Building Docker Image..."
+                echo "Building Docker image..."
                 sh '''
                     docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .
                 '''
@@ -23,7 +32,7 @@ pipeline {
 
         stage('Stop Existing Container') {
             steps {
-                echo "Stopping existing container if it exists..."
+                echo "Stopping existing container (if running)..."
                 sh '''
                     docker stop ${CONTAINER_NAME} || true
                     docker rm ${CONTAINER_NAME} || true
@@ -45,9 +54,9 @@ pipeline {
 
         stage('Health Check') {
             steps {
-                echo "Checking application health..."
+                echo "Verifying application health..."
                 sh '''
-                    sleep 10
+                    sleep 5
                     curl --fail http://localhost:${HOST_PORT}/health.php
                 '''
             }
@@ -57,21 +66,24 @@ pipeline {
     post {
 
         success {
-            echo "====================================="
-            echo "Deployment Successful!"
+            echo "=========================================="
+            echo "✅ Deployment Successful!"
             echo "Application URL:"
-            echo "http://<EC2-PUBLIC-IP>:8081"
-            echo "====================================="
+            echo "http://<YOUR_PUBLIC_IP>:8081"
+            echo "Health Check:"
+            echo "http://<YOUR_PUBLIC_IP>:8081/health.php"
+            echo "=========================================="
         }
 
         failure {
-            echo "====================================="
-            echo "Deployment Failed!"
-            echo "Check the console output for details."
-            echo "====================================="
+            echo "=========================================="
+            echo "❌ Deployment Failed!"
+            echo "Please check the Jenkins Console Output."
+            echo "=========================================="
         }
 
         always {
+            echo "Running Docker Containers:"
             sh 'docker ps -a'
         }
     }
