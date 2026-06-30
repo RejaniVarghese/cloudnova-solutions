@@ -316,3 +316,42 @@ This project can be extended further by implementing:
 - Amazon RDS Integration
 - Kubernetes Deployment
 - GitHub Actions CI/CD
+
+---
+
+# 📸 Project Screenshots
+
+The following screenshots demonstrate the application, CI/CD pipeline, and deployment process.
+
+| Screenshot | Description |
+|------------|-------------|
+| Home Page | Responsive CloudNova Solutions website |
+| Jenkins Pipeline | Successful CI/CD pipeline execution |
+| Docker Container | Running application container |
+| AWS EC2 | Cloud deployment environment |
+| Health Check | Application health verification |
+| Contact Page | Contact form interface |
+| Status Page | Application status dashboard |
+
+> Screenshots will be added in a future update.
+
+---
+
+# 👩‍💻 Author
+
+**Rejani Mary Varghese**
+
+Cloud & DevOps Engineer
+
+### Connect with me
+
+- LinkedIn: *(Add your LinkedIn profile URL here)*
+- GitHub: *(Add your GitHub profile URL here)*
+
+---
+
+# 🙏 Acknowledgements
+
+This project was developed as part of my Cloud & DevOps learning journey to gain hands-on experience with AWS, Docker, Jenkins, Git, GitHub and Linux.
+
+Special thanks to the open-source community for providing excellent tools and documentation that made this project possible.
