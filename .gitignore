@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Backup files
+*.bak
+*.old
+
+# Vim swap files
+*.swp
+
+# VS Code
+.vscode/
+
+# IntelliJ
+.idea/
+
+# Docker
+docker-compose.override.yml
