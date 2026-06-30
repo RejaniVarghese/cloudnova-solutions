@@ -1,101 +1,47 @@
-<div align="center">
-
 # ☁️ CloudNova Solutions
 
-### Cloud & DevOps CI/CD Project using AWS, Docker, Jenkins & GitHub
-
-A beginner-friendly end-to-end Cloud & DevOps project demonstrating Continuous Integration and Continuous Deployment (CI/CD) using **AWS EC2**, **Docker**, **Jenkins**, **GitHub**, and **PHP**.
-
-</div>
+A complete Cloud & DevOps project demonstrating automated deployment of a PHP web application on AWS EC2 using Docker, Jenkins, Git, and GitHub.
 
 ---
 
-<p align="center">
+# 📌 Project Overview
 
-<img src="assets/project-overview.png" width="900">
+CloudNova Solutions is a multi-page PHP web application developed to demonstrate an end-to-end DevOps workflow.
 
-</p>
+The project showcases how a web application can be version-controlled using GitHub, containerized using Docker, deployed on AWS EC2, and automatically redeployed through a Jenkins CI/CD pipeline.
 
----
-
-## 📖 Project Overview
-
-CloudNova Solutions is a fictional cloud consulting company developed as a hands-on Cloud & DevOps project.
-
-The objective of this project was to deploy a PHP application on AWS EC2, containerize it using Docker, automate deployment using Jenkins, and manage the source code with GitHub.
-
-This project demonstrates a complete CI/CD workflow while following industry-standard DevOps practices.
+This project focuses on practical implementation of Cloud and DevOps concepts while following industry best practices.
 
 ---
 
-## 🚀 Project Highlights
+# 🚀 Features
 
-- Dockerized PHP Application
-- Jenkins CI/CD Pipeline
-- AWS EC2 Deployment
-- GitHub Integration
-- Automated Container Deployment
-- Health Check Endpoint
-- Responsive Multi-Page Website
+- Multi-page PHP website
+- Responsive user interface
+- Docker containerization
+- Jenkins CI/CD pipeline
+- Automated deployment
+- AWS EC2 hosting
+- Health Check page
+- Application Status Dashboard
+- Professional GitHub documentation
 
 ---
 
-# 🛠️ Technology Stack
+# 🛠 Technology Stack
 
 | Technology | Purpose |
 |------------|---------|
-| ☁️ AWS EC2 | Cloud Hosting |
-| 🐧 Amazon Linux 2023 | Operating System |
-| 🐘 PHP | Backend Development |
-| 🐳 Docker | Application Containerization |
-| ⚙️ Jenkins | Continuous Integration & Continuous Deployment |
-| 🌐 Git | Version Control |
-| 📂 GitHub | Source Code Repository |
-| 💻 HTML5 | Web Page Structure |
-| 🎨 CSS3 | Website Styling |
-
----
-
-# 🏗️ Solution Architecture
-
-The application follows a simple CI/CD workflow where every code update is version-controlled, built into a Docker image, and deployed automatically to an AWS EC2 instance using Jenkins.
-
-```text
-                 Developer
-                     │
-                     ▼
-              GitHub Repository
-                     │
-                     ▼
-            Jenkins CI/CD Pipeline
-                     │
-                     ▼
-          Build Docker Image
-                     │
-                     ▼
-        Deploy Docker Container
-                     │
-                     ▼
-       AWS EC2 (Amazon Linux 2023)
-                     │
-                     ▼
-         CloudNova Solutions Website
-```
-
----
-
-# ✨ Features
-
-- 🚀 Responsive multi-page PHP website
-- 🐳 Dockerized application deployment
-- ⚙️ Jenkins CI/CD Pipeline
-- ☁️ AWS EC2 hosting
-- 🌐 GitHub source control
-- ❤️ Health Check endpoint
-- 📊 Application Status page
-- 📞 Contact page
-- 🔄 Automated Docker deployment
-- 📱 Responsive design
+| Amazon Linux 2023 | Operating System |
+| AWS EC2 | Cloud Hosting |
+| PHP 8.2 | Backend |
+| Apache HTTP Server | Web Server |
+| Docker | Containerization |
+| Jenkins | CI/CD Automation |
+| Git | Version Control |
+| GitHub | Source Code Repository |
+| HTML5 | Web Structure |
+| CSS3 | Styling |
 
 ---
 
@@ -105,19 +51,22 @@ The application follows a simple CI/CD workflow where every code update is versi
 cloudnova-solutions/
 
 ├── assets/
+│   ├── project-overview.png
 │   └── screenshots/
-
+│
 ├── css/
 │   └── style.css
-
+│
 ├── docs/
-
+│
 ├── diagrams/
-
+│
 ├── includes/
 │   ├── header.php
 │   └── footer.php
-
+│
+├── scripts/
+│
 ├── index.php
 ├── about.php
 ├── services.php
@@ -125,40 +74,115 @@ cloudnova-solutions/
 ├── contact.php
 ├── status.php
 ├── health.php
-
+│
 ├── Dockerfile
 ├── Jenkinsfile
-
-└── README.md
+├── README.md
+├── CHANGELOG.md
+├── LICENSE
+├── .gitignore
+└── .dockerignore
 ```
 
 ---
 
-# ⚙️ Installation Guide
+# 🏗 Solution Architecture
 
-## Clone the Repository
+![Project Overview](assets/project-overview.png)
 
-```bash
-git clone https://github.com/<YOUR_GITHUB_USERNAME>/cloudnova-solutions.git
+---
+
+# ⚙️ CI/CD Workflow
+
+```text
+Developer
+     │
+     ▼
+Git Commit
+     │
+     ▼
+GitHub Repository
+     │
+     ▼
+Jenkins Pipeline
+     │
+     ▼
+Docker Image Build
+     │
+     ▼
+Stop Existing Container
+     │
+     ▼
+Deploy New Container
+     │
+     ▼
+Health Check
+     │
+     ▼
+Application Available on AWS EC2
 ```
 
-Navigate to the project directory.
+---
+
+# 📸 Project Screenshots
+
+## 🏠 Home Page
+
+![Home Page](assets/screenshots/01-homepage.png)
+
+---
+
+## ❤️ Health Check
+
+![Health Check](assets/screenshots/07-health-check.png)
+
+---
+
+## ☁️ AWS EC2 Deployment
+
+![AWS EC2](assets/screenshots/08-aws-ec2-dashboard.png)
+
+---
+
+## 📂 GitHub Repository
+
+![GitHub Repository](assets/screenshots/09-github-repository.png)
+
+---
+
+## ⚙️ Jenkins Pipeline
+
+![Jenkins Pipeline](assets/screenshots/11-jenkins-stage-view.png)
+
+---
+
+## 🐳 Docker Container
+
+![Docker Container](assets/screenshots/13-docker-running-containers.png)
+
+---
+
+# 🚀 Deployment Steps
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/<your-github-username>/cloudnova-solutions.git
+```
+
+2. Navigate to the project
 
 ```bash
 cd cloudnova-solutions
 ```
 
----
-
-## Build the Docker Image
+3. Build the Docker image
 
 ```bash
 docker build -t cloudnova:v1 .
 ```
 
----
-
-## Run the Docker Container
+4. Run the Docker container
 
 ```bash
 docker run -d \
@@ -167,11 +191,7 @@ docker run -d \
 cloudnova:v1
 ```
 
----
-
-## Access the Application
-
-Open your browser and visit:
+5. Open the application
 
 ```text
 http://<EC2-PUBLIC-IP>:8081
@@ -179,9 +199,7 @@ http://<EC2-PUBLIC-IP>:8081
 
 ---
 
-## Health Check
-
-Verify the application is running correctly.
+# ❤️ Health Check
 
 ```text
 http://<EC2-PUBLIC-IP>:8081/health.php
@@ -189,9 +207,7 @@ http://<EC2-PUBLIC-IP>:8081/health.php
 
 ---
 
-## Status Page
-
-View the application status.
+# 📊 Status Dashboard
 
 ```text
 http://<EC2-PUBLIC-IP>:8081/status.php
@@ -199,141 +215,38 @@ http://<EC2-PUBLIC-IP>:8081/status.php
 
 ---
 
-# 🚀 CI/CD Workflow
+# 💡 Challenges Faced
 
-```text
-Developer
-
-        │
-
-        ▼
-
-Git Commit
-
-        │
-
-        ▼
-
-Git Push
-
-        │
-
-        ▼
-
-GitHub Repository
-
-        │
-
-        ▼
-
-Jenkins Pipeline
-
-        │
-
-        ▼
-
-Build Docker Image
-
-        │
-
-        ▼
-
-Deploy Docker Container
-
-        │
-
-        ▼
-
-Health Check
-
-        │
-
-        ▼
-
-CloudNova Website Available
-```
+- Configuring Docker on AWS EC2
+- Building a Jenkins CI/CD pipeline
+- Managing Docker containers during deployment
+- Troubleshooting Docker image build failures
+- Configuring Health Check validation
+- Organizing project documentation
 
 ---
 
-# ⚠️ Challenges Faced
+# 📚 Key Learning Outcomes
 
-During the development of this project, I encountered several practical challenges that helped me better understand real-world DevOps workflows.
-
-### Jenkins Integration
-
-- Configuring Jenkins to execute Docker commands without interactive `sudo`.
-- Managing Jenkins user permissions for Docker.
-- Troubleshooting Jenkins executor availability.
-
-### Docker Deployment
-
-- Building Docker images successfully.
-- Managing existing containers before deployment.
-- Verifying application deployment inside Docker.
-
-### Application Testing
-
-- Implementing a Health Check endpoint.
-- Validating the deployed application after every build.
-- Testing container accessibility using browser and terminal.
-
-### Git & GitHub
-
-- Managing project versions using Git.
-- Updating the Jenkins pipeline after repository changes.
-- Maintaining a clean project structure for GitHub.
+- AWS EC2 instance management
+- Docker image creation and container management
+- Jenkins Pipeline development
+- Git and GitHub workflow
+- PHP application deployment
+- CI/CD automation
+- Linux server administration
 
 ---
 
-# 📚 Learning Outcomes
+# 🔮 Future Enhancements
 
-Through this project, I gained practical experience in:
-
-- Linux Administration
-- AWS EC2 Management
-- Git & GitHub
-- Docker Containerization
-- Jenkins CI/CD Pipelines
-- PHP Application Deployment
-- Health Check Implementation
-- Container Lifecycle Management
-- CI/CD Troubleshooting
-- Professional GitHub Repository Management
-
----
-
-# 🚀 Future Enhancements
-
-This project can be extended further by implementing:
-
-- GitHub Webhooks for automatic builds
-- HTTPS using Let's Encrypt
-- Terraform for Infrastructure as Code
-- Prometheus Monitoring
-- Grafana Dashboard
-- AWS Application Load Balancer
-- Auto Scaling Group
-- Amazon RDS Integration
-- Kubernetes Deployment
-- GitHub Actions CI/CD
-
----
-
-# 📸 Project Screenshots
-
-The following screenshots demonstrate the application, CI/CD pipeline, and deployment process.
-
-| Screenshot | Description |
-|------------|-------------|
-| Home Page | Responsive CloudNova Solutions website |
-| Jenkins Pipeline | Successful CI/CD pipeline execution |
-| Docker Container | Running application container |
-| AWS EC2 | Cloud deployment environment |
-| Health Check | Application health verification |
-| Contact Page | Contact form interface |
-| Status Page | Application status dashboard |
-
-> Screenshots will be added in a future update.
+- SSL/HTTPS support
+- Custom domain integration
+- Nginx reverse proxy
+- GitHub Webhooks
+- Docker Compose
+- AWS Load Balancer
+- Terraform deployment
 
 ---
 
@@ -343,15 +256,19 @@ The following screenshots demonstrate the application, CI/CD pipeline, and deplo
 
 Cloud & DevOps Engineer
 
-### Connect with me
-
-- LinkedIn: *(Add your LinkedIn profile URL here)*
-- GitHub: *(Add your GitHub profile URL here)*
+- GitHub: https://github.com/<your-github-username>
+- LinkedIn: https://www.linkedin.com/in/<your-linkedin-profile>
 
 ---
 
-# 🙏 Acknowledgements
+# 📄 License
 
-This project was developed as part of my Cloud & DevOps learning journey to gain hands-on experience with AWS, Docker, Jenkins, Git, GitHub and Linux.
+This project is licensed under the MIT License.
 
-Special thanks to the open-source community for providing excellent tools and documentation that made this project possible.
+See the LICENSE file for details.
+
+---
+
+# ⭐ Support
+
+If you found this project helpful, consider giving it a ⭐ on GitHub.
