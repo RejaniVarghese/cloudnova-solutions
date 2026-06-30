@@ -131,3 +131,124 @@ cloudnova-solutions/
 
 └── README.md
 ```
+
+---
+
+# ⚙️ Installation Guide
+
+## Clone the Repository
+
+```bash
+git clone https://github.com/<YOUR_GITHUB_USERNAME>/cloudnova-solutions.git
+```
+
+Navigate to the project directory.
+
+```bash
+cd cloudnova-solutions
+```
+
+---
+
+## Build the Docker Image
+
+```bash
+docker build -t cloudnova:v1 .
+```
+
+---
+
+## Run the Docker Container
+
+```bash
+docker run -d \
+--name cloudnova-app \
+-p 8081:80 \
+cloudnova:v1
+```
+
+---
+
+## Access the Application
+
+Open your browser and visit:
+
+```text
+http://<EC2-PUBLIC-IP>:8081
+```
+
+---
+
+## Health Check
+
+Verify the application is running correctly.
+
+```text
+http://<EC2-PUBLIC-IP>:8081/health.php
+```
+
+---
+
+## Status Page
+
+View the application status.
+
+```text
+http://<EC2-PUBLIC-IP>:8081/status.php
+```
+
+---
+
+# 🚀 CI/CD Workflow
+
+```text
+Developer
+
+        │
+
+        ▼
+
+Git Commit
+
+        │
+
+        ▼
+
+Git Push
+
+        │
+
+        ▼
+
+GitHub Repository
+
+        │
+
+        ▼
+
+Jenkins Pipeline
+
+        │
+
+        ▼
+
+Build Docker Image
+
+        │
+
+        ▼
+
+Deploy Docker Container
+
+        │
+
+        ▼
+
+Health Check
+
+        │
+
+        ▼
+
+CloudNova Website Available
+```
