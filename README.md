@@ -37,3 +37,47 @@ This project demonstrates a complete CI/CD workflow while following industry-sta
 - Automated Container Deployment
 - Health Check Endpoint
 - Responsive Multi-Page Website
+
+---
+
+# 🛠️ Technology Stack
+
+| Technology | Purpose |
+|------------|---------|
+| ☁️ AWS EC2 | Cloud Hosting |
+| 🐧 Amazon Linux 2023 | Operating System |
+| 🐘 PHP | Backend Development |
+| 🐳 Docker | Application Containerization |
+| ⚙️ Jenkins | Continuous Integration & Continuous Deployment |
+| 🌐 Git | Version Control |
+| 📂 GitHub | Source Code Repository |
+| 💻 HTML5 | Web Page Structure |
+| 🎨 CSS3 | Website Styling |
+
+---
+
+# 🏗️ Solution Architecture
+
+The application follows a simple CI/CD workflow where every code update is version-controlled, built into a Docker image, and deployed automatically to an AWS EC2 instance using Jenkins.
+
+```text
+                 Developer
+                     │
+                     ▼
+              GitHub Repository
+                     │
+                     ▼
+            Jenkins CI/CD Pipeline
+                     │
+                     ▼
+          Build Docker Image
+                     │
+                     ▼
+        Deploy Docker Container
+                     │
+                     ▼
+       AWS EC2 (Amazon Linux 2023)
+                     │
+                     ▼
+         CloudNova Solutions Website
+```
