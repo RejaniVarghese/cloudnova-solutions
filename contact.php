@@ -1,56 +1,97 @@
 <?php include 'includes/header.php'; ?>
 
+<section class="hero">
+
+    <h2>Get in Touch</h2>
+
+    <p>
+        Have questions about Cloud, DevOps, Infrastructure Automation or Linux?
+        We'd love to hear from you.
+    </p>
+
+</section>
+
 <section>
 
-<h2>Contact CloudNova Solutions</h2>
+    <h2>Contact Information</h2>
 
-<p>
-Have questions about Cloud, DevOps or Automation?
-Send us a message.
-</p>
+    <div class="cards">
 
-<h3>Contact Information</h3>
+        <div class="card">
 
-<p>
+            <h3><i class="fa-solid fa-envelope"></i> Email</h3>
 
-📍 Kochi, Kerala, India<br>
+            <p>
+                info@cloudnovasolutions.demo
+            </p>
 
-📧 support@cloudnova.com<br>
+        </div>
 
-📞 +91 9876543210
+        <div class="card">
 
-</p>
+            <h3><i class="fa-solid fa-business-time"></i> Working Hours</h3>
 
-<hr>
+            <p>
+                Monday – Friday
+                <br>
+                9:00 AM – 6:00 PM (IST)
+            </p>
 
-<?php
+        </div>
 
-if(isset($_POST['submit']))
-{
-    echo "<h3 style='color:green;'>Thank you! Your message has been received.</h3>";
-}
+        <div class="card">
 
-?>
+            <h3><i class="fa-solid fa-headset"></i> Support</h3>
 
-<form method="POST">
+            <p>
+                We typically respond to all enquiries within one business day.
+            </p>
 
-<label>Name</label><br>
+        </div>
 
-<input type="text" name="name" required><br><br>
+    </div>
 
-<label>Email</label><br>
+</section>
 
-<input type="email" name="email" required><br><br>
+<section>
 
-<label>Message</label><br>
+    <h2>Send Us a Message</h2>
 
-<textarea name="message" rows="6" cols="50" required></textarea>
+    <form>
 
-<br><br>
+        <label>Full Name</label>
 
-<input type="submit" name="submit" value="Send Message">
+        <input
+            type="text"
+            placeholder="Enter your full name"
+            required>
 
-</form>
+        <label>Email Address</label>
+
+        <input
+            type="email"
+            placeholder="Enter your email address"
+            required>
+
+        <label>Subject</label>
+
+        <input
+            type="text"
+            placeholder="Subject"
+            required>
+
+        <label>Message</label>
+
+        <textarea
+            rows="6"
+            placeholder="Write your message here..."
+            required></textarea>
+
+        <input
+            type="submit"
+            value="Send Message">
+
+    </form>
 
 </section>
 
