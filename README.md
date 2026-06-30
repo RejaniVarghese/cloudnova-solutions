@@ -81,3 +81,53 @@ The application follows a simple CI/CD workflow where every code update is versi
                      ▼
          CloudNova Solutions Website
 ```
+
+---
+
+# ✨ Features
+
+- 🚀 Responsive multi-page PHP website
+- 🐳 Dockerized application deployment
+- ⚙️ Jenkins CI/CD Pipeline
+- ☁️ AWS EC2 hosting
+- 🌐 GitHub source control
+- ❤️ Health Check endpoint
+- 📊 Application Status page
+- 📞 Contact page
+- 🔄 Automated Docker deployment
+- 📱 Responsive design
+
+---
+
+# 📂 Project Structure
+
+```text
+cloudnova-solutions/
+
+├── assets/
+│   └── screenshots/
+
+├── css/
+│   └── style.css
+
+├── docs/
+
+├── diagrams/
+
+├── includes/
+│   ├── header.php
+│   └── footer.php
+
+├── index.php
+├── about.php
+├── services.php
+├── pricing.php
+├── contact.php
+├── status.php
+├── health.php
+
+├── Dockerfile
+├── Jenkinsfile
+
+└── README.md
+```
