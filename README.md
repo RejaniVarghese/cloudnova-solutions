@@ -252,3 +252,67 @@ Health Check
 
 CloudNova Website Available
 ```
+
+---
+
+# ⚠️ Challenges Faced
+
+During the development of this project, I encountered several practical challenges that helped me better understand real-world DevOps workflows.
+
+### Jenkins Integration
+
+- Configuring Jenkins to execute Docker commands without interactive `sudo`.
+- Managing Jenkins user permissions for Docker.
+- Troubleshooting Jenkins executor availability.
+
+### Docker Deployment
+
+- Building Docker images successfully.
+- Managing existing containers before deployment.
+- Verifying application deployment inside Docker.
+
+### Application Testing
+
+- Implementing a Health Check endpoint.
+- Validating the deployed application after every build.
+- Testing container accessibility using browser and terminal.
+
+### Git & GitHub
+
+- Managing project versions using Git.
+- Updating the Jenkins pipeline after repository changes.
+- Maintaining a clean project structure for GitHub.
+
+---
+
+# 📚 Learning Outcomes
+
+Through this project, I gained practical experience in:
+
+- Linux Administration
+- AWS EC2 Management
+- Git & GitHub
+- Docker Containerization
+- Jenkins CI/CD Pipelines
+- PHP Application Deployment
+- Health Check Implementation
+- Container Lifecycle Management
+- CI/CD Troubleshooting
+- Professional GitHub Repository Management
+
+---
+
+# 🚀 Future Enhancements
+
+This project can be extended further by implementing:
+
+- GitHub Webhooks for automatic builds
+- HTTPS using Let's Encrypt
+- Terraform for Infrastructure as Code
+- Prometheus Monitoring
+- Grafana Dashboard
+- AWS Application Load Balancer
+- Auto Scaling Group
+- Amazon RDS Integration
+- Kubernetes Deployment
+- GitHub Actions CI/CD
